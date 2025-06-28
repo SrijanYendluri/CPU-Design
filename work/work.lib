@@ -1,0 +1,85 @@
+timestamp=1751068645011
+
+[~A]
+LastVerilogToplevel=processor_tb
+ModifyID=1
+Version=74
+design.sv_testbench.sv=0*2329*5416
+
+[~MFT]
+0=11|0work.mgf|5416|0
+1=9|1work.mgf|14418|0
+3=18|3work.mgf|12118|0
+
+[$root]
+A/$root=22|||1*0
+BinL64/$root=3*0
+SLP=3*106
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|c73a565f2ade592f8ac1c68f484c9216b7efd721166596192e819f5a0fb8626f
+
+[alu]
+A/alu=22|../ALU.v|1|1*4857
+BinL64/alu=3*2894
+R=../ALU.v|1
+SLP=3*3780
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|fdc9c85601beb4171a6a25c637e2168ebe7180d1a8edd9fe39ec84ef7fe802f7
+
+[cu]
+A/cu=22|../CU.v|1|1*6228
+BinL64/cu=3*4153
+R=../CU.v|1
+SLP=3*5040
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|9aab4dbc25335da970a2d75b04e414e360f71333dff976da81f8ac7afb08878f
+
+[data_memory]
+A/data_memory=22|../DM.v|1|1*7539
+BinL64/data_memory=3*5791
+R=../DM.v|1
+SLP=3*6365
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|726284356dccaf29bb796a741e5c78b5503161ccddc43b92871758a951bfdd2c61e2a8955742ee48f0a440d78840ed48
+
+[instruction_memory]
+A/instruction_memory=22|../IM.v|1|1*390
+BinL64/instruction_memory=3*174
+R=../IM.v|1
+SLP=3*858
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|aa5cdeefbdd8ec0382d54b92f1958785a79624349d5b8f82688a21519974b3e6b6581e203a99f73a43754499d57ad7b8
+
+[processor]
+A/processor=22|../design.sv|8|1*9098
+BinL64/processor=3*6669
+R=../design.sv|8
+SLP=3*8796
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|0ba77dee7e73996b5655ae47cd2cf07e7c4c90057ca4c0d4118ab0a7474483362c9d4b607ff4e3ef46f4d78892a16866
+
+[processor_tb]
+A/processor_tb=22|../testbench.sv|1|1*14418
+BinL64/processor_tb=3*10843
+R=../testbench.sv|1
+SLP=3*12118
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|520fc2cd04c0649ab816729476a27aaac0ff7f5d7d907d14f4d8748f44154fc17c7a8edcad5993e230df2b36d26e31d2
+
+[program_counter]
+A/program_counter=22|../PC.v|1|1*3583
+BinL64/program_counter=3*2247
+R=../PC.v|1
+SLP=3*2640
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|8f4c9b71392661bb64aaf1fd1ecdee3884ee5168192b3e6ad34e2bbdf84bdd451d934b440ec174293f47d74dcb0a6c06
+
+[register_file]
+A/register_file=22|../RF.v|1|1*1702
+BinL64/register_file=3*1185
+R=../RF.v|1
+SLP=3*1871
+Version=2023.04.112 (Linux64)|00000012789cd32dc9cc4d2d4e4ecc495530cc2bd60762003d9c0658|a396fecd832e4041f15ae1be4d0acbff9590461053dd9c77b27bc3f69d93ce39e9738ecc1f036d9b52f8ab91c8861f58
+
+[~U]
+$root=12|0*0|
+alu=12|0*970|
+cu=12|0*1223|
+data_memory=12|0*1482|
+instruction_memory=12|0*230|
+processor=12|0*1729|
+processor_tb=12|0*2096||0x10
+program_counter=12|0*734|
+register_file=12|0*453|

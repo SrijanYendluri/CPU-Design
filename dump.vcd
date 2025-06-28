@@ -1,0 +1,523 @@
+$date
+Fri Jun 27 19:57:25 2025
+$end
+$version
+Riviera-PRO Version 2023.04.112.8911
+$end
+$timescale
+1 ns
+$end
+
+$scope module processor_tb $end
+$var wire 16 ! debug_pc [15:0] $end
+$var wire 16 " debug_instruction [15:0] $end
+$var wire 16 # debug_reg1 [15:0] $end
+$var wire 16 $ debug_reg2 [15:0] $end
+$var wire 16 % debug_ALUResult [15:0] $end
+$var wire 16 $ debug_mem_data [15:0] $end
+$var wire 16 & debug_alu_src2 [15:0] $end
+$var wire 16 ' debug_alu_src1 [15:0] $end
+$var wire 16 ( debug_rf_src1 [15:0] $end
+$var wire 16 ) debug_rf_src2 [15:0] $end
+$var wire 16 * debug_add [15:0] $end
+$var wire 16 + debug_rf_data1 [15:0] $end
+$var wire 16 , debug_rf_data2 [15:0] $end
+$var reg 1 - clk $end
+$var reg 1 . reset $end
+
+$scope module uut $end
+$var wire 1 / clk $end
+$var wire 1 0 reset $end
+$var wire 16 1 instruction [15:0] $end
+$var wire 3 2 opcode [2:0] $end
+$var reg 16 3 debug_instruction [15:0] $end
+$var reg 16 4 debug_ALUResult [15:0] $end
+$var reg 16 5 debug_pc [15:0] $end
+$var reg 16 6 debug_reg1 [15:0] $end
+$var reg 16 7 debug_add [15:0] $end
+$var reg 16 8 debug_alu_src1 [15:0] $end
+$var reg 16 9 debug_alu_src2 [15:0] $end
+$var reg 16 : debug_rf_src1 [15:0] $end
+$var reg 16 ; debug_rf_src2 [15:0] $end
+$var reg 16 < debug_rf_data1 [15:0] $end
+$var reg 16 = debug_rf_data2 [15:0] $end
+$var reg 1 > write_reg $end
+$var reg 1 ? write_data_mem $end
+$var reg 1 @ add $end
+$var reg 1 A alu_nand $end
+$var reg 1 B pass1 $end
+$var reg 1 C br $end
+$var reg 1 D eq $end
+$var reg 1 E EQ_out_ALU $end
+$var reg 1 F EQ_out_CU $end
+$var reg 3 G RF_TGT [2:0] $end
+$var reg 3 H RF_SRC1 [2:0] $end
+$var reg 3 I RF_SRC2 [2:0] $end
+$var reg 16 J RF_DATA1 [15:0] $end
+$var reg 16 K RF_DATA2 [15:0] $end
+$var reg 16 L RF_write_DATA [15:0] $end
+$var reg 16 M ALU_SRC1 [15:0] $end
+$var reg 16 N ALU_SRC2 [15:0] $end
+$var reg 16 O ALU_RESULT [15:0] $end
+$var reg 16 P pc [15:0] $end
+$var reg 16 Q pc_next [15:0] $end
+$var reg 16 R ADDR [15:0] $end
+$var reg 16 S DATA_IN [15:0] $end
+$var reg 16 T DATA_OUT [15:0] $end
+$var reg 3 U rA [2:0] $end
+
+$scope module IM $end
+$var wire 16 V addr [15:0] $end
+$var reg 16 W instruction [15:0] $end
+$upscope $end
+
+
+$scope module RF $end
+$var wire 1 / clk $end
+$var wire 3 X TGT [2:0] $end
+$var wire 3 Y REG_SRC1 [2:0] $end
+$var wire 3 Z REG_SRC2 [2:0] $end
+$var wire 16 [ RF_write_data [15:0] $end
+$var wire 1 \ write_en_reg $end
+$var reg 16 ] REG_DATA1 [15:0] $end
+$var reg 16 ^ REG_DATA2 [15:0] $end
+$upscope $end
+
+
+$scope module ALU $end
+$var wire 16 _ ALU_SRC1 [15:0] $end
+$var wire 16 ` ALU_SRC2 [15:0] $end
+$var wire 1 a ADD $end
+$var wire 1 b NAND $end
+$var wire 1 c PASS1 $end
+$var wire 1 d EQ $end
+$var reg 16 e ALU_RESULT [15:0] $end
+$var reg 1 f EQ_out $end
+$upscope $end
+
+
+$scope module CU $end
+$var wire 3 2 opcode [2:0] $end
+$var wire 1 g EQ_out $end
+$var reg 1 h write_en_reg $end
+$var reg 1 i ADD $end
+$var reg 1 j NAND $end
+$var reg 1 k PASS1 $end
+$var reg 1 l write_mem $end
+$var reg 1 m EQ $end
+$var reg 1 n BR $end
+$upscope $end
+
+
+$scope module PC $end
+$var wire 1 / clk $end
+$var wire 1 0 reset $end
+$var wire 16 o pc_next [15:0] $end
+$var reg 16 p pc [15:0] $end
+$upscope $end
+
+
+$scope module DM $end
+$var wire 1 / clk $end
+$var wire 1 q write_mem $end
+$var wire 16 r ADDR [15:0] $end
+$var wire 16 s DATA_IN [15:0] $end
+$var reg 16 t DATA_OUT [15:0] $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b0 !
+b110010000000110 "
+b1 #
+bz $
+b110 %
+b0 &
+b110 '
+b0 (
+b0 )
+b0 *
+bx +
+bx ,
+0-
+1.
+0/
+10
+b110010000000110 1
+b11 2
+b110010000000110 3
+b110 4
+b0 5
+b1 6
+b0 7
+b110 8
+b0 9
+b0 :
+b0 ;
+bx <
+bx =
+1>
+0?
+0@
+0A
+1B
+0C
+0D
+0E
+0F
+b1 G
+b0 H
+b0 I
+bx J
+bx K
+b110 L
+b110 M
+b0 N
+b110 O
+b0 P
+b1 Q
+b0 R
+b0 S
+bx T
+b1 U
+b0 V
+b110010000000110 W
+b1 X
+b0 Y
+b0 Z
+b110 [
+1\
+bx ]
+bx ^
+b110 _
+b0 `
+0a
+0b
+1c
+0d
+b110 e
+0f
+0g
+1h
+0i
+0j
+1k
+0l
+0m
+0n
+b1 o
+b0 p
+0q
+b0 r
+b0 s
+bx t
+$end
+#5
+1-
+1/
+#10
+0.
+0-
+0/
+00
+#15
+1-
+1/
+b1 p
+b1 P
+b1 V
+b1 G
+b110 M
+b110 L
+b10 Q
+b1 5
+b110100000000101 W
+b110100000000101 1
+b1 !
+b10 o
+b10 U
+b10 G
+b101 M
+b110 L
+b110100000000101 3
+b10 6
+b101 8
+b101 '
+b10 #
+b110100000000101 "
+b101 _
+b10 X
+b101 e
+b101 O
+b10 G
+b101 M
+b101 L
+b101 4
+b101 %
+b101 [
+#20
+0-
+0/
+#25
+1-
+1/
+b10 p
+b10 P
+b10 V
+b10 G
+b101 M
+b101 L
+b11 Q
+b10 5
+b110010000010 W
+b110010000010 1
+b10 !
+b11 o
+b11 U
+b0 2
+b11 G
+bx M
+b101 L
+b1 H
+b10 I
+bx N
+b110010000010 3
+b11 6
+bx 8
+bx 9
+b1 :
+b10 ;
+1h
+0k
+1i
+0B
+1@
+1a
+0c
+b10 )
+b1 (
+bx &
+bx '
+b11 #
+b110010000010 "
+bx `
+b10 Z
+b1 Y
+bx _
+b11 X
+b11 G
+b1 H
+b10 I
+bx M
+bx N
+b101 L
+b1 7
+bx e
+b110 ]
+b101 ^
+bx O
+b110 J
+b101 K
+b1 *
+b11 G
+b1 H
+b10 I
+b110 M
+b101 N
+bx L
+bx 4
+b110 8
+b101 9
+b110 <
+b101 =
+b101 ,
+b110 +
+b101 &
+b110 '
+bx %
+bx [
+b101 `
+b110 _
+b1011 e
+b1011 O
+b11 G
+b1 H
+b10 I
+b110 M
+b101 N
+b1011 L
+b1011 4
+b1011 %
+b1011 [
+#30
+0-
+0/
+#35
+1-
+1/
+b11 p
+b11 P
+b11 V
+b11 G
+b1 H
+b10 I
+b110 M
+b101 N
+b1011 L
+b100 Q
+b11 5
+b1110000000000000 W
+b1110000000000000 1
+b11 !
+b100 o
+b0 U
+b111 2
+b0 G
+b0 H
+b0 I
+b110 M
+b0 N
+b100 L
+b1011 Q
+b1110000000000000 3
+b0 6
+b0 9
+b0 :
+b0 ;
+1h
+0i
+1k
+0@
+1B
+1c
+0a
+b0 )
+b0 (
+b0 &
+b0 #
+b1110000000000000 "
+b1011 o
+b100 [
+b0 `
+b0 Z
+b0 Y
+b0 X
+b110 M
+b100 L
+b1011 Q
+b0 7
+b110 e
+bx ]
+bx ^
+b110 O
+bx J
+bx K
+b0 *
+bx M
+b100 L
+b110 Q
+b110 4
+bx 8
+bx <
+bx =
+bx ,
+bx +
+bx '
+b110 %
+b110 o
+bx _
+bx e
+bx O
+bx M
+b100 L
+bx Q
+bx 4
+bx %
+bx o
+#40
+0-
+0/
+#45
+1-
+1/
+bx p
+bx P
+bx V
+b100 ]
+b100 ^
+bx M
+bx L
+bx 5
+bx W
+b100 J
+b100 K
+bx 1
+bx !
+bx [
+bx U
+bx 2
+b0 M
+b0 L
+bx 3
+b0xxx 6
+b0 8
+b100 <
+b100 =
+0h
+0k
+0>
+0B
+0c
+0\
+b100 ,
+b100 +
+b0 '
+b0xxx #
+bx "
+b0 [
+b0 _
+b0 e
+b0 O
+b0 4
+b0 %
+#50
+0-
+0/
+#55
+1-
+1/
+#60
+0-
+0/
+#65
+1-
+1/
+#70
+0-
+0/
+#75
+1-
+1/
+#80
+0-
+0/
+#85
+1-
+1/
+#90
+0-
+0/
+#95
+1-
+1/
+#100
+0-
+0/
+#105
+1-
+1/
+#110

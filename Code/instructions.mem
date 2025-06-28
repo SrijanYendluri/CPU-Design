@@ -1,0 +1,4 @@
+0110010000000110 //load 6 into reg 1
+0110100000000101 //load 5 into reg 2
+0000110010000010 //load values in reg1 + reg2 into reg3
+1110000000000000 //halt
